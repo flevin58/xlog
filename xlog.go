@@ -20,7 +20,7 @@ type xLoggers struct {
 var xlog xLoggers
 
 func init() {
-	defaultFlags := log.Ldate | log.Lshortfile
+	defaultFlags := log.Ldate | log.Ltime | log.Lshortfile
 	xlog = xLoggers{
 		xinfo:       log.New(os.Stderr, "INFO: ", defaultFlags),
 		xwarn:       log.New(os.Stderr, "WARN: ", defaultFlags),
